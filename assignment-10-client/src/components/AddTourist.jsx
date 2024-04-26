@@ -1,7 +1,7 @@
 
 
 const AddTourist = () => {
-    const handleAddPlace = event =>{
+    const handleAddPlace = event => {
         event.preventDefault()
         const form = event.target
         const name = form.name.value
@@ -13,30 +13,31 @@ const AddTourist = () => {
         const time = form.time.value
         const visitor = form.visitor.value
         const fullName = form.fullName.value
-        const email = form.emailvalue
+        const email = form.email.value
         const photo = form.photo.value
-        
-        const newPlace = {name, country, location, description, cost, seasonality, time,visitor,fullName,photo,email}
+
+        const newPlace = { name, country, location, description, cost, seasonality, time, visitor, fullName, photo, email }
         console.log(newPlace)
-        fetch('http://localhost:5000/place',{
+        fetch('http://localhost:5000/place', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
             },
-            body : JSON.stringify(newPlace)
+            body: JSON.stringify(newPlace)
         }
-    )
+        )
 
-        .then(res=> res.json())
-        .then(data=>{
-            console.log(data)
-        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data)
+               
+            })
     }
     return (
-        <div className="bg-yellow-100 p-24 m-3 rounded-xl">
+        <div className="bg-yellow-100 mx-auto w-auto lg:w-[1000px] p-20 m-3 rounded-xl">
             <h2 className="text-3xl my-3 text-center font-extrabold">Add a Tourist Spot</h2>
             <form onSubmit={handleAddPlace} >
-               
+
                 <div className="md:flex mb-8">
                     <div className="form-control md:w-1/2">
                         <label className="label">
@@ -55,7 +56,7 @@ const AddTourist = () => {
                         </label>
                     </div>
                 </div>
-                
+
                 <div className="md:flex mb-8">
                     <div className="form-control md:w-1/2">
                         <label className="label">
@@ -65,7 +66,7 @@ const AddTourist = () => {
                             <input type="text" name="location" placeholder="Location" className="input input-bordered w-full" />
                         </label>
                     </div>
-                    
+
                     <div className="form-control md:w-1/2 ml-4">
                         <label className="label">
                             <span className="label-text">Short Description</span>
@@ -75,7 +76,7 @@ const AddTourist = () => {
                         </label>
                     </div>
                 </div>
-              
+
 
                 <div className="md:flex mb-8">
                     <div className="form-control md:w-1/2">
@@ -113,7 +114,7 @@ const AddTourist = () => {
                         </label>
                     </div>
                 </div>
-               
+
                 <div className="mb-8">
                     <div className="form-control w-full">
                         <label className="label">
