@@ -29,11 +29,11 @@ const Banner = () => {
                     autoplay={
                         { delay: 2001 }
                     }>
-                    <SwiperSlide><img className='w-auto h-auto rounded-lg' src="https://i.ibb.co/0Kr6j64/1618245974-shutterstock-1186362172.jpg" alt="" /></SwiperSlide>
-                    <SwiperSlide><img className='w-auto h-auto rounded-lg' src="https://i.ibb.co/SXs9LXG/goycmp7sgrx6mqe4byg3o6kk6hbo-2595a1d7e592aeb5e81e1c6e432ceaef.jpg" alt="" /></SwiperSlide>
-                    <SwiperSlide><img className='w-auto h-auto rounded-lg' src="https://i.ibb.co/s1PW5sr/7dm8zgmet4qch5xguyx21ud4wnvs-1622033849-shutterstock-597391175.jpg" alt="" /></SwiperSlide>
-                    <SwiperSlide><img className='w-auto h-auto rounded-lg' src="https://i.ibb.co/mDHpc69/xjp5cwag6z2a18o2mswtal7djp2y-7d013fc8bd63f7a185c9aeb41864e919.jpg" alt="" /></SwiperSlide>
-                    <SwiperSlide><img className='w-auto h-auto rounded-lg' src="https://i.ibb.co/72HpjSX/tqoi06pkedw6xqpbapzvkhgylfu8-28849d88548b64a6f18ef8dd65b07539.jpg" alt="" /></SwiperSlide>
+                    <SwiperSlide><img className='w-auto h-[450px] rounded-lg' src="https://i.ibb.co/0Kr6j64/1618245974-shutterstock-1186362172.jpg" alt="" /></SwiperSlide>
+                    <SwiperSlide><img className='w-auto h-auto rounded-lg' src="https://i.ibb.co/gdhkHpz/xwuihgglduacuo7margs.webp" alt="" /></SwiperSlide>
+                    <SwiperSlide><img className='w-auto h-auto rounded-lg' src="https://i.ibb.co/xhHDd6s/MALAYSIA.jpg" alt="" /></SwiperSlide>
+                    <SwiperSlide><img className='w-auto h-auto rounded-lg' src="https://i.ibb.co/CQG1Wdg/Nha-Trangportpanoramio-20200906122537.jpg" alt="" /></SwiperSlide>
+                    <SwiperSlide><img className='w-[700px] h-[450px] rounded-lg' src="https://i.ibb.co/qJ4n2RM/Performers-of-Water-Puppet-Show-20200928175046.jpg" alt="" /></SwiperSlide>
                   
                 </Swiper>
             </div>

@@ -30,13 +30,18 @@ const Header = () => {
             <ul className="hidden text-xl items-center justify-between ml-16 gap-10 md:flex">
                 <Link to="/">  <li className="group flex  cursor-pointer flex-col">
                     Home<span className="mt-[2px] h-[3px] w-[0px] rounded-full bg-yellow-400 transition-all duration-300 group-hover:w-full"></span>
-                </li></Link>
-                <li className="group flex  cursor-pointer flex-col">
-                    All Tourists Spot<span className="mt-[2px] h-[3px]  w-[0px] rounded-full bg-yellow-400 transition-all duration-300 group-hover:w-full"></span>
                 </li>
-                <li className="group flex  cursor-pointer flex-col">
-                    Add Tourists Spot<span className="mt-[2px] h-[3px]  w-[0px] rounded-full bg-yellow-400 transition-all duration-300 group-hover:w-full"></span>
-                </li>
+                </Link>
+                <Link to="/allTourist">
+                    <li className="group flex  cursor-pointer flex-col">
+                        All Tourists Spot<span className="mt-[2px] h-[3px]  w-[0px] rounded-full bg-yellow-400 transition-all duration-300 group-hover:w-full"></span>
+                    </li>
+                </Link>
+                <Link to="/addTourist">
+                    <li className="group flex  cursor-pointer flex-col">
+                        Add Tourists Spot<span className="mt-[2px] h-[3px]  w-[0px] rounded-full bg-yellow-400 transition-all duration-300 group-hover:w-full"></span>
+                    </li>
+                </Link>
                 <li className="group flex  cursor-pointer flex-col">
                     My List<span className="mt-[2px] h-[3px]  w-[0px] rounded-full bg-yellow-400 transition-all duration-300 group-hover:w-full"></span>
                 </li>
@@ -60,15 +65,15 @@ const Header = () => {
                             My List
                         </li>
                         <Link to="/register">
-                         <li className="cursor-pointer  px-6 py-2 text-white hover:bg-yellow-400 ">
-                            Register
-                        </li></Link>
-                      <Link to="/login">
-                      <li className="cursor-pointer  px-6 py-2 text-white hover:bg-yellow-400 ">
-                            Login
-                        </li>
+                            <li className="cursor-pointer  px-6 py-2 text-white hover:bg-yellow-400 ">
+                                Register
+                            </li></Link>
+                        <Link to="/login">
+                            <li className="cursor-pointer  px-6 py-2 text-white hover:bg-yellow-400 ">
+                                Login
+                            </li>
 
-                      </Link>
+                        </Link>
                     </ul>
                 )}
             </div>

@@ -9,6 +9,7 @@ import Root from "./components/Root";
 import Home from "./components/Home";
 import Login from "./components/Login";
 import Reg from "./components/Reg";
+import AddTourist from './components/AddTourist';
 
 
 
@@ -33,6 +34,11 @@ const router = createBrowserRouter([
                     path: "/register",
                     element: <Reg></Reg> ,
                 }, 
+                {
+                    path: "/addTourist",
+                    element: <AddTourist></AddTourist> ,
+                }, 
+                
                    
             ],
     },
