@@ -18,6 +18,7 @@ import AllTourist from './components/AllTourist';
 import TouristDetails from "./components/TouristDetails";
 import CountryCard from "./components/CountryCard";
 import UpdateSpots from "./components/UpdateSpots";
+import CategoriesCard from "./components/CategoriesCard";
 
 
 
@@ -70,6 +71,7 @@ const router = createBrowserRouter([
                         <CountryCard></CountryCard>
                     </PrivateRoute>,
                 },
+
                 {
                     path: "/place/:id",
                     element: <PrivateRoute>
@@ -78,7 +80,10 @@ const router = createBrowserRouter([
                     loader: () => fetch('http://localhost:5000/place')
                   },
 
-
+                {
+                    path: "/category/:id",
+                    element : <CategoriesCard></CategoriesCard>
+                }
 
             ],
     },

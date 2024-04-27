@@ -2,6 +2,9 @@ import { Link } from "react-router-dom";
 
 const CountryCard = ({ category }) => {
     const { country, image } = category || {}
+    console.log(country)
+    const id = country.split(' ').join('&')
+    console.log(id)
     return (
         <div>
             <div className="my-20">
@@ -12,7 +15,7 @@ const CountryCard = ({ category }) => {
                     <div className="card-body items-center text-center">
                         <h2 className="card-title">{country}</h2>
                         <div className="card-actions">
-                            <Link to="/allTourist"><button className="btn bg-gradient-to-r bg-yellow-500">Details</button></Link>
+                            <Link to={`/category/${id}`}><button className="btn bg-gradient-to-r bg-yellow-500">Details</button></Link>
                         </div>
                     </div>
                 </div>

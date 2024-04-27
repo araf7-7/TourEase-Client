@@ -46,7 +46,8 @@ const Header = () => {
                 <div className="navbar-end gap-3">
                     <div className="items-center  lg:flex">
                         {user ? (
-                            <div className="dropdown dropdown-end lg:mr-10">
+                            <div className="flex">
+                                <div className="dropdown dropdown-end mx-auto flex lg:mr-10">
                                 <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
                                     <div className="w-10 rounded-full">
                                         {user.photoURL ? (
@@ -55,11 +56,15 @@ const Header = () => {
                                             <span>{user?.displayName?.charAt(0)}</span> 
                                         )}
                                     </div>
+                                    
                                 </label>
-                                <ul tabIndex={0} className="menu  menu-sm dropdown-content mt-3 z-[100] p-2 shadow bg-base-100 rounded-box w-52">
+                               
+                                <ul tabIndex={0} className="menu  menu-sm dropdown-content mt-14 z-[100] x-[100] p-2 shadow bg-base-100 rounded-box w-52">
                                 <li><button className="btn btn-sm btn-ghost">{user?.displayName}</button></li>
-                                    <li><button className="btn btn-sm btn-ghost" onClick={handleLogout}>Logout</button></li> {/* Use handleLogout function */}
+                                    {/* Use handleLogout function */}
                                 </ul>
+                            </div>
+                            <button  className="btn btn-base btn-ghost" onClick={handleLogout}>Logout</button>
                             </div>
                         ) : (
                             <><NavLink to="/login"><button className="self-center px-8 py-3 rounded hidden lg:flex">Login</button></NavLink>
