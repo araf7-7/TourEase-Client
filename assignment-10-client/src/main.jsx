@@ -14,6 +14,10 @@ import FirebaseProvider from "./components/FirebaseProvider/FirebaseProvider";
 import { Toaster } from "sonner";
 import ErrorPage from "./ErrorPage";
 import PrivateRoute from "./components/PrivetRoute/PrivetRoute";
+import AllTourist from './components/AllTourist';
+import TouristDetails from "./components/TouristDetails";
+import CountryCard from "./components/CountryCard";
+import UpdateSpots from "./components/UpdateSpots";
 
 
 
@@ -30,6 +34,8 @@ const router = createBrowserRouter([
                 {
                     path: "/",
                     element: <Home></Home>,
+                    loader: () => fetch('http://localhost:5000/category')
+                   
                 },
                 {
                     path: "/login",
@@ -40,11 +46,37 @@ const router = createBrowserRouter([
                     element: <Reg></Reg>,
                 },
                 {
+                    path: "/allTourist",
+                    element: <AllTourist></AllTourist>,
+                    loader : () => fetch('http://localhost:5000/place')
+                },
+                {
                     path: "/addTourist",
                     element: <PrivateRoute>
                         <AddTourist></AddTourist>
                     </PrivateRoute>,
                 },
+                {
+                    path: "/updateSpots/:id",
+                    element: <PrivateRoute>
+                        <UpdateSpots></UpdateSpots>
+                    </PrivateRoute>,
+                    loader : ({params}) => fetch(`http://localhost:5000/place/${params.id}`)
+
+                },
+                {
+                    path: "/countries",
+                    element: <PrivateRoute>
+                        <CountryCard></CountryCard>
+                    </PrivateRoute>,
+                },
+                {
+                    path: "/place/:id",
+                    element: <PrivateRoute>
+                      <TouristDetails></TouristDetails>
+                    </PrivateRoute>,
+                    loader: () => fetch('http://localhost:5000/place')
+                  },
 
 
 

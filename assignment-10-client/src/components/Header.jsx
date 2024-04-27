@@ -21,6 +21,7 @@ const Header = () => {
                         <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 font-semibold">
                             <NavLink to="/" className="hover:text-yellow-500 hover:border-2 hover:border-yellow-500 p-2 rounded-lg">Home</NavLink>
                             <Link to="/addTourist" className="hover:text-yellow-500 hover:border-2 hover:border-yellow-500 p-2 rounded-lg">Add Tourist Spots</Link>
+                            <Link to="/allTourist" className="hover:text-white hover:bg-yellow-500 hover:border-2 hover:border-yellow-500 p-2 rounded-lg">All Tourist Spots</Link>
                             <NavLink to="/login" className="hover:text-yellow-500 hover:border-2 hover:border-yellow-500 p-2 rounded-lg">Login</NavLink>
                             <NavLink to="/register" className="hover:text-yellow-500 hover:border-2 hover:border-yellow-500 p-2 rounded-lg">Register</NavLink>
                         
@@ -36,7 +37,7 @@ const Header = () => {
                     <ul className="menu menu-horizontal px-1 font-semibold">
                         <Link to="/" className="hover:text-white hover:bg-yellow-500 hover:border-2 hover:border-yellow-500 p-2 rounded-lg">Home</Link>
                         <Link to="/addTourist" className="hover:text-white hover:bg-yellow-500 hover:border-2 hover:border-yellow-500 p-2 rounded-lg">Add Tourist Spots</Link>
-                        <Link to="/" className="hover:text-white hover:bg-yellow-500 hover:border-2 hover:border-yellow-500 p-2 rounded-lg">All Tourist Spots</Link>
+                        <Link to="/allTourist" className="hover:text-white hover:bg-yellow-500 hover:border-2 hover:border-yellow-500 p-2 rounded-lg">All Tourist Spots</Link>
                         <Link to="/" className="hover:text-white hover:bg-yellow-500 hover:border-2 hover:border-yellow-500 p-2 rounded-lg">My List</Link>
                     
                         

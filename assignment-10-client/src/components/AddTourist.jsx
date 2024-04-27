@@ -1,3 +1,4 @@
+import Swal from "sweetalert2";
 
 
 const AddTourist = () => {
@@ -17,7 +18,6 @@ const AddTourist = () => {
         const photo = form.photo.value
 
         const newPlace = { name, country, location, description, cost, seasonality, time, visitor, fullName, photo, email }
-        console.log(newPlace)
         fetch('http://localhost:5000/place', {
             method: 'POST',
             headers: {
@@ -30,6 +30,14 @@ const AddTourist = () => {
             .then(res => res.json())
             .then(data => {
                 console.log(data)
+                if(data.insertedId){
+                    Swal.fire({
+                        title: 'Success!',
+                        text: 'Coffee Added Successfully',
+                        icon: 'success',
+                        confirmButtonText: 'Cool'
+                      })
+                }
                
             })
     }
