@@ -2,6 +2,7 @@
 import { Link, NavLink } from "react-router-dom";
 
 import UseAuth from './UseAuth';
+import { Tooltip } from "react-tooltip";
 
 const Header = () => {
     const { logout, user } = UseAuth();
@@ -29,7 +30,7 @@ const Header = () => {
                     </div>
                     <div className="flex  justify-center item-center text-center">
                         <img src="https://i.ibb.co/BBq1HZ7/Purple-and-Blue-Grdient-Simple-Minimalist-Elegant-Website-Logo.png" alt="" className="w-[100px] h-auto" />
-                        <h2 className="btn btn-ghost mt-6 text-2xl">TourEase</h2>
+                        <h2 className="btn md:justify-end lg:justify-normal btn-ghost mt-6 text-2xl">TourEase</h2>
                     </div>
                 </div>
                 
@@ -49,7 +50,8 @@ const Header = () => {
                             <div className="flex">
                                 <div className="dropdown dropdown-end mx-auto flex lg:mr-10">
                                 <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
-                                    <div className="w-10 rounded-full">
+                                    <div className="w-10 rounded-full " data-tooltip-id="my-tooltip" data-tooltip-content={user.displayName}>
+                                    <Tooltip id="my-tooltip" />
                                         {user.photoURL ? (
                                             <img src={user?.photoURL} alt={user?.displayName} />
                                         ) : (
@@ -59,12 +61,9 @@ const Header = () => {
                                     
                                 </label>
                                
-                                <ul tabIndex={0} className="menu  menu-sm dropdown-content mt-14 z-[100] x-[100] p-2 shadow bg-base-100 rounded-box w-52">
-                                <li><button className="btn btn-sm btn-ghost">{user?.displayName}</button></li>
-                                    {/* Use handleLogout function */}
-                                </ul>
+                               
                             </div>
-                            <button  className="btn btn-base btn-ghost" onClick={handleLogout}>Logout</button>
+                            <button  className="btn bg-yellow-500 hover:bg-yellow-600 btn-base btn-ghost" onClick={handleLogout}>Logout</button>
                             </div>
                         ) : (
                             <><NavLink to="/login"><button className="self-center px-8 py-3 rounded hidden lg:flex">Login</button></NavLink>

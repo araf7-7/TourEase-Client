@@ -42,7 +42,7 @@ const AddTourist = () => {
             })
     }
     return (
-        <div className="bg-yellow-100 mx-auto w-auto lg:w-[1000px] p-20 m-3 rounded-xl">
+        <div className="bg-yellow-100 mx-auto w-auto lg:w-[1000px] p-10 md:p-14 lg:p-20 m-3 rounded-xl">
             <h2 className="text-3xl my-3 text-center font-extrabold">Add a Tourist Spot</h2>
             <form onSubmit={handleAddPlace} >
 
@@ -55,7 +55,7 @@ const AddTourist = () => {
                             <input type="text" name="name" placeholder="Tourist Spot Name" className="input input-bordered w-full" />
                         </label>
                     </div>
-                    <div className="form-control md:w-1/2 ml-4">
+                    <div className="form-control md:w-1/2 md:ml-2 lg:ml-4">
                         <label className="label">
                             <span className="label-text">Country Name</span>
                         </label>
@@ -75,7 +75,7 @@ const AddTourist = () => {
                         </label>
                     </div>
 
-                    <div className="form-control md:w-1/2 ml-4">
+                    <div className="form-control md:w-1/2 md:ml-2 lg:ml-4">
                         <label className="label">
                             <span className="label-text">Short Description</span>
                         </label>
@@ -95,7 +95,7 @@ const AddTourist = () => {
                             <input type="number" name="cost" placeholder="Average Cost" className="input input-bordered w-full" />
                         </label>
                     </div>
-                    <div className="form-control md:w-1/2 ml-4">
+                    <div className="form-control md:w-1/2 md:ml-2 lg:ml-4">
                         <label className="label">
                             <span className="label-text">Seasonality</span>
                         </label>
@@ -113,7 +113,7 @@ const AddTourist = () => {
                             <input type="number" name="time" placeholder="Travel Time" className="input input-bordered w-full" />
                         </label>
                     </div>
-                    <div className="form-control md:w-1/2 ml-4">
+                    <div className="form-control md:w-1/2 md:ml-2 lg:ml-4">
                         <label className="label">
                             <span className="label-text">Total Visitor</span>
                         </label>

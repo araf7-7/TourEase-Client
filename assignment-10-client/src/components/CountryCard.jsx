@@ -15,7 +15,7 @@ const CountryCard = ({ category }) => {
                     <div className="card-body items-center text-center">
                         <h2 className="card-title">{country}</h2>
                         <div className="card-actions">
-                            <Link to={`/category/${id}`}><button className="btn bg-gradient-to-r bg-yellow-500">Details</button></Link>
+                            <Link to={`/category/${id}`}><button className="btn  bg-gradient-to-r hover:bg-yellow-600 bg-yellow-500">Details</button></Link>
                         </div>
                     </div>
                 </div>

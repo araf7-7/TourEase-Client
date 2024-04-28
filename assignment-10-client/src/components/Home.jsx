@@ -5,17 +5,19 @@ import Banner from "./Banner";
 import CountryCard from './CountryCard';
 
 
+
 const Home = () => {
     const categories = useLoaderData();
     return (
         <>
        
             <Banner></Banner>
+           
             <div className="container mx-auto items-center justify-center mt-20">
                 <h1 className="text-4xl font-bold text-center">Countries</h1>
                 <p className="text-2xl font-semibold text-center mt-4">Find The Best Tourist Spots Of Each Countries</p>
             </div>
-            <div className="container mx-auto gap-4 grid grid-cols-3">
+            <div className="container mx-auto gap-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
                 
             {
                 categories?.map(category =>

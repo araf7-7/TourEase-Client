@@ -9,8 +9,8 @@ const TouristDetails = () => {
     return (
 
         <div>
-            <div className="card container mx-auto  ">
-                <div className="flex gap-10">
+            <div className="card container  lg:mx-auto  ">
+                <div className="lg:flex mx-2 gap-10 flex-0">
                 <img className="w-[500px] rounded-lg" src={places.photo} alt="Album" />
                 <div className="card-body bg-base-100 shadow-2xl rounded-xl">
                     <h2 className="card-title">{places.name}</h2>

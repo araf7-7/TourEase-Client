@@ -15,7 +15,8 @@ const CategoriesCard = () => {
     console.log(places);
     return (
         <div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-10 container mx-auto">
+            <h1 className='text-4xl font-bold text-center'>Tourist Spot Of : {category}</h1>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-2 container mx-auto">
                     {places?.map(place => <ResortCard key={place._id} place={place}></ResortCard>)}
             </div>
         </div>
