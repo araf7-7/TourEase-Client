@@ -6,12 +6,18 @@ import CountryCard from './CountryCard';
 
 
 
+
+
+
 const Home = () => {
     const categories = useLoaderData();
+
     return (
         <>
        
             <Banner></Banner>
+            
+      
            
             <div className="container mx-auto items-center justify-center mt-20">
                 <h1 className="text-4xl font-bold text-center">Countries</h1>

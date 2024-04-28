@@ -25,7 +25,7 @@ const Header = () => {
                             <Link to="/allTourist" className="hover:text-white hover:bg-yellow-500 hover:border-2 hover:border-yellow-500 p-2 rounded-lg">All Tourist Spots</Link>
                             <NavLink to="/login" className="hover:text-yellow-500 hover:border-2 hover:border-yellow-500 p-2 rounded-lg">Login</NavLink>
                             <NavLink to="/register" className="hover:text-yellow-500 hover:border-2 hover:border-yellow-500 p-2 rounded-lg">Register</NavLink>
-                        
+                            <Link to="/myList" className="hover:text-white hover:bg-yellow-500 hover:border-2 hover:border-yellow-500 p-2 rounded-lg">My List</Link>
                         </ul>
                     </div>
                     <div className="flex  justify-center item-center text-center">
@@ -39,7 +39,7 @@ const Header = () => {
                         <Link to="/" className="hover:text-white hover:bg-yellow-500 hover:border-2 hover:border-yellow-500 p-2 rounded-lg">Home</Link>
                         <Link to="/addTourist" className="hover:text-white hover:bg-yellow-500 hover:border-2 hover:border-yellow-500 p-2 rounded-lg">Add Tourist Spots</Link>
                         <Link to="/allTourist" className="hover:text-white hover:bg-yellow-500 hover:border-2 hover:border-yellow-500 p-2 rounded-lg">All Tourist Spots</Link>
-                        <Link to="/" className="hover:text-white hover:bg-yellow-500 hover:border-2 hover:border-yellow-500 p-2 rounded-lg">My List</Link>
+                        <Link to="/myList" className="hover:text-white hover:bg-yellow-500 hover:border-2 hover:border-yellow-500 p-2 rounded-lg">My List</Link>
                     
                         
                     </ul>

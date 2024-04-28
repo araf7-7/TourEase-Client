@@ -14,7 +14,7 @@ const CountryCard = ({ category }) => {
                     </figure>
                     <div className="card-body items-center text-center">
                         <h2 className="card-title">{country}</h2>
-                        <div className="card-actions">
+                        <div className="">
                             <Link to={`/category/${id}`}><button className="btn  bg-gradient-to-r hover:bg-yellow-600 bg-yellow-500">Details</button></Link>
                         </div>
                     </div>
