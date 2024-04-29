@@ -8,7 +8,7 @@ const MyListPage = () => {
     const places = useLoaderData()
     return (
        <div>
-            <h2 className="mb-4 container text-center text-4xl font-semibold leading-tight">Tourist Spots</h2>
+            <h2 className="mb-4 mx-auto container text-center text-4xl font-semibold leading-tight">Tourist Spots</h2>
 
          <div>
                 {places?.map(place => <MyListCard key={place._id}

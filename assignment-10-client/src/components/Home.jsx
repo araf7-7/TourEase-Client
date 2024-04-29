@@ -6,6 +6,7 @@ import CountryCard from './CountryCard';
 import { useEffect, useState } from "react";
 import TouristSection from "./TouristSection";
 import Review from "./Review";
+import Team from "./Team";
 
 
 
@@ -51,6 +52,7 @@ const Home = () => {
                 }
             </div>
                     <Review></Review>
+                    <Team></Team>
 
         </>
     );

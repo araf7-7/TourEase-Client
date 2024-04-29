@@ -22,15 +22,16 @@ const MyListCard = ({ place }) => {
                             <thead className="dark:bg-gray-300">
                                 <tr className="text-left">
                                     
-                                    <th className="p-3">Name</th>
-                                    <th className="p-3">Country</th>
                                     <th className="p-3">Image</th>
+                                    <th className="p-3">Country</th>
+                                    <th className="p-3">Name</th>
                                     <th className="p-3 text-right">Amount</th>
-                                    <th className="p-3">Status</th>
+                                    <th className="p-3 text-right">Details</th>
+                                   
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr className="border-b border-opacity-20 dark:border-gray-300 dark:bg-gray-50">
+                                <tr className="border-b . container mx-auto border-opacity-20 dark:border-gray-300 dark:bg-gray-50">
                                     
                                     <td className="p-3">
                                         <img className="w-14 h-auto rounded-lg" src={photo} alt="" />
@@ -41,7 +42,6 @@ const MyListCard = ({ place }) => {
                                     <td className="p-3">
                                         <p>{country}</p>
                                     </td>
-                                  
                                     <td className="p-3 text-right">
                                         <p>{cost}</p>
                                     </td>
