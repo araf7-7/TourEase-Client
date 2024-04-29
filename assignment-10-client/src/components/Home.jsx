@@ -5,6 +5,7 @@ import Banner from "./Banner";
 import CountryCard from './CountryCard';
 import { useEffect, useState } from "react";
 import TouristSection from "./TouristSection";
+import Review from "./Review";
 
 
 
@@ -49,7 +50,7 @@ const Home = () => {
                         </CountryCard>)
                 }
             </div>
-
+                    <Review></Review>
 
         </>
     );

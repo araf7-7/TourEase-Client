@@ -1,9 +1,11 @@
 import { Fade } from "react-awesome-reveal";
+import { AiOutlineNumber } from "react-icons/ai";
+import { FaGlobeAmericas } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 const TouristSection = ({ place }) => {
 
-    const { _id, name, photo, description } = place || {};
+    const { _id, name, photo, visitor, country } = place || {};
     return (
         <div>
             <div
@@ -16,7 +18,15 @@ const TouristSection = ({ place }) => {
                     <div className="space-y-2">
                         <Fade duration={3000}>
                             <h2 className="text-lg font-semibold" >{name}</h2>
-                            <small><p className="dark:text-gray-800" >{ description}</p></small>
+                          <div className="flex gap-2 items-center">
+                          <FaGlobeAmericas />
+                          <h2 className="text-lg font-semibold" > Country : {country}</h2>
+                          </div>
+
+                          <div className="flex gap-2 items-center">
+                          <AiOutlineNumber />
+                          <p className= "text-lg font-semibold dark:text-gray-800" > Total Visitor : { visitor}</p>
+                          </div>
                             <div>
                                 <Link to={`/place/${_id}`}>
                                     <button className="btn  w-full text-white bg-gradient-to-r bg-yellow-500 hover:bg-yellow-600">View Details</button>
