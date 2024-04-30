@@ -7,13 +7,7 @@ const AllTourist = () => {
 
     const [places, setPlaces] = useState([]);
     const [order, setOrder] = useState('');
-    // useEffect(() => {
-    //     fetch(`http://localhost:5000/userTourist/${user?.email}`)
-    //         .then((res) => res.json())
-    //         .then((data) => setPlaces(data))
-    //         .catch((error) => {
-    //             console.error("Error fetching data:", error);
-    //         }));
+  
     useEffect(() => {
         fetch(`http://localhost:5000/place?order=${order}`)
             .then((res) => res.json())
@@ -32,8 +26,8 @@ const AllTourist = () => {
                <div className="container text-xl mx-auto items-center justify-center ">
                <select className=" " value={order} onChange={(e) => setOrder(e.target.value)}>
                 <option value="">All</option>
-                <option value="acc">acc</option>
-                <option value="dcc">dcc</option>
+                <option value="acc">Ascending</option>
+                <option value="dcc">Descending</option>
 
 
             </select>

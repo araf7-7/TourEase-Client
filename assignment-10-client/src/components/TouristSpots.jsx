@@ -1,4 +1,4 @@
-import { useLoaderData } from "react-router-dom";
+
 import ResortCard from "./ResortCard";
 import { useEffect, useState } from "react";
 

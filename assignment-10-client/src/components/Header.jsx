@@ -33,15 +33,15 @@ const Header = () => {
                         <h2 className="btn md:justify-end lg:justify-normal btn-ghost mt-6 text-2xl">TourEase</h2>
                     </div>
                 </div>
-                
+
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1 font-semibold">
                         <Link to="/" className="hover:text-white hover:bg-yellow-500 hover:border-2 hover:border-yellow-500 p-2 rounded-lg">Home</Link>
                         <Link to="/addTourist" className="hover:text-white hover:bg-yellow-500 hover:border-2 hover:border-yellow-500 p-2 rounded-lg">Add Tourist Spots</Link>
                         <Link to="/allTourist" className="hover:text-white hover:bg-yellow-500 hover:border-2 hover:border-yellow-500 p-2 rounded-lg">All Tourist Spots</Link>
                         <Link to="/myList" className="hover:text-white hover:bg-yellow-500 hover:border-2 hover:border-yellow-500 p-2 rounded-lg">My List</Link>
-                    
-                        
+
+
                     </ul>
                 </div>
                 <div className="navbar-end gap-3">
@@ -49,26 +49,27 @@ const Header = () => {
                         {user ? (
                             <div className="flex">
                                 <div className="dropdown dropdown-end mx-auto flex lg:mr-10">
-                                <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
-                                    <div className="w-10 rounded-full " data-tooltip-id="my-tooltip" data-tooltip-content={user.displayName}>
-                                    <Tooltip id="my-tooltip" />
-                                        {user.photoURL ? (
-                                            <img src={user?.photoURL} alt={user?.displayName} />
-                                        ) : (
-                                            <span>{user?.displayName?.charAt(0)}</span> 
-                                        )}
-                                    </div>
-                                    
-                                </label>
-                               
-                               
-                            </div>
-                            <button  className="btn bg-yellow-500 hover:bg-yellow-600 btn-base btn-ghost" onClick={handleLogout}>Logout</button>
+                                    <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+                                        <div className="w-10 rounded-full " data-tooltip-id="my-tooltip" data-tooltip-content={user.displayName}>
+                                            <Tooltip id="my-tooltip" />
+                                            {user.photoURL ? (
+                                                <img src={user?.photoURL} alt={user?.displayName} />
+                                            ) : (
+                                                <span>{user?.displayName?.charAt(0)}</span>
+                                            )}
+                                        </div>
+
+                                    </label>
+
+
+                                </div>
+                                <button className="btn bg-yellow-500 hover:bg-yellow-600 btn-base btn-ghost" onClick={handleLogout}>Logout</button>
                             </div>
                         ) : (
                             <><NavLink to="/login"><button className="self-center px-8 py-3 rounded hidden lg:flex">Login</button></NavLink>
-                            <NavLink to="/register"><button className="self-center px-8 py-3 font-semibold rounded hidden lg:flex dark:bg-yellow-500 dark:text-gray-50">Register</button></NavLink></>
+                                <NavLink to="/register"><button className="self-center px-8 py-3 font-semibold rounded hidden lg:flex dark:bg-yellow-500 dark:text-gray-50">Register</button></NavLink></>
                         )}
+                        
                     </div>
                 </div>
             </div>
