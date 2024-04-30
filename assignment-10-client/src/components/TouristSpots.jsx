@@ -1,9 +1,20 @@
 import { useLoaderData } from "react-router-dom";
 import ResortCard from "./ResortCard";
+import { useEffect, useState } from "react";
 
 
 const TouristSpots = () => {
-    const places = useLoaderData();
+    const [places, setPlaces] = useState([]);
+  useEffect(() => {
+    fetch(`http://localhost:5000/place`)
+      .then((res) => res.json())
+      .then((data) => setPlaces(data))
+      .catch((error) => {
+        console.error("Error fetching data:", error);
+      });
+  }, []);
+
+    console.log(  "asdas", places );
     return (
         <div>
             <div>

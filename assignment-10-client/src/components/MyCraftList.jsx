@@ -4,8 +4,8 @@ import UseAuth from "./UseAuth";
 
 const MyCraftList = () => {
   const { user } = UseAuth();
-  const [tourists, setTourists] = useState([]);
 
+  const [tourists, setTourists] = useState([]);
   useEffect(() => {
     fetch(`http://localhost:5000/userTourist/${user?.email}`)
       .then((res) => res.json())
@@ -19,11 +19,11 @@ const MyCraftList = () => {
     <div>
       <section className="mt-28 mx-6">
         <h2 className="text-3xl lg:text-5xl font-bold text-center">
-          My Art&Craft
+          My Tourist List
         </h2>
         <div className="">
           {tourists.map((tourist) => (
-            <MyCraftCard key={tourist.email} tourist={tourist} />
+            <MyCraftCard key={tourist.email} tourists={tourists} setTourists={setTourists} tourist={tourist} />
           ))}
         </div>
       </section>

@@ -32,7 +32,7 @@ const Home = () => {
             <section className="max-w-6xl mx-auto mt-32">
                 <h2 className="text-3xl lg:text-5xl font-bold  text-center mx-auto">Tourist Spots</h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-10 mx-2">
-                    {places?.slice(1, 7).map(place => <TouristSection key={place.id} place={place}></TouristSection>)}
+                    {places?.slice(0, 7).map(place => <TouristSection key={place.id} place={place}></TouristSection>)}
                 </div>
             </section>
             

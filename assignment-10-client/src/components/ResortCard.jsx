@@ -15,37 +15,37 @@ const ResortCard = ({place}) => {
     }, [])
     const {_id,name, country, location, cost, seasonality, time, visitor, photo} = place||{}
     return (
-        <div className="my-20 mx-auto "  data-aos="fade-up">
+        <div className="my-20 mx-auto "  >
             <div className="mx-w-auto p-6 rounded-md shadow-md dark:bg-gray-50 dark:text-gray-900">
                 <img src={photo} alt="" className="object-cover object-center w-full rounded-md h-[300px] dark:bg-gray-500" />
                 <div className="mt-6 mb-2 ">
                     <div className="flex justify-between " >
-                    <div className="flex mx-auto justify-end items-center gap-2" data-aos="fade-up">
+                    <div className="flex mx-auto justify-end items-center gap-2" >
                     <RiMoneyDollarBoxLine />
-                    <span className="block text-base font-normal tracking-widest  dark:text-yellow-500"  data-aos="fade-up"> Cost: {cost}</span>
+                    <span className="block text-base font-normal tracking-widest  dark:text-yellow-500"  > Cost: {cost}</span>
                     </div>
-                    <div className="flex mx-auto justify-end items-center gap-2"  data-aos="fade-up" >
+                    <div className="flex mx-auto justify-end items-center gap-2"   >
                     <MdVisibility />
-                    <span className="block text-base font-normal tracking-widest dark:text-yellow-500" data-aos="fade-up"> Visitor: {visitor}</span>
+                    <span className="block text-base font-normal tracking-widest dark:text-yellow-500" > Visitor: {visitor}</span>
                     </div>
                     </div>
-                    <h2 className="text-xl font-semibold tracking-wide" data-aos="fade-up">{name}</h2>
-                    <div className="flex items-center gap-2"  data-aos="fade-up">
+                    <h2 className="text-xl font-semibold tracking-wide" >{name}</h2>
+                    <div className="flex items-center gap-2"  >
                     <FaMapLocationDot />
-                    <h2 className="text-xl font-semibold tracking-wide " data-aos="fade-up"> {location}</h2>
+                    <h2 className="text-xl font-semibold tracking-wide " > {location}</h2>
                     </div>
-                   <div className="flex items-center gap-2" data-aos="fade-up" >
-                   <AiFillCopyrightCircle /><h2 className="text-xl font-semibold tracking-wide" data-aos="fade-up">Country: {country}</h2>
+                   <div className="flex items-center gap-2"  >
+                   <AiFillCopyrightCircle /><h2 className="text-xl font-semibold tracking-wide" >Country: {country}</h2>
                    </div>
-                   <div className="flex items-center gap-2 " data-aos="fade-up" >
-                   <TiWeatherCloudy /><h2 className="text-xl font-semibold tracking-wide" data-aos="fade-up">Season: {seasonality}</h2>
+                   <div className="flex items-center gap-2 "  >
+                   <TiWeatherCloudy /><h2 className="text-xl font-semibold tracking-wide" >Season: {seasonality}</h2>
                    </div>
-                   <div className="flex items-center gap-2"  data-aos="fade-up">
-                   <IoTime /><h2 className="text-xl font-semibold tracking-wide" data-aos="fade-up">Travel Time: {time} Hours</h2>
+                   <div className="flex items-center gap-2"  >
+                   <IoTime /><h2 className="text-xl font-semibold tracking-wide" >Travel Time: {time} Hours</h2>
                    </div>
                     
                 </div>
-                <Link to={`/place/${_id}`} > <button  data-aos="fade-up" className="btn bg-yellow-500 btn-block"  >View Details</button></Link>
+                <Link to={`/place/${_id}`} > <button   className="btn bg-yellow-500 btn-block"  >View Details</button></Link>
                
             </div>
         </div>
