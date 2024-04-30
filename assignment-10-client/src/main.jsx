@@ -20,7 +20,8 @@ import CountryCard from "./components/CountryCard";
 import UpdateSpots from "./components/UpdateSpots";
 import CategoriesCard from "./components/CategoriesCard";
 import TouristSpots from "./components/TouristSpots";
-import MyListPage from "./components/MyListPage";
+import MyCraftList from "./components/MyCraftList";
+
 
 
 
@@ -64,11 +65,10 @@ const router = createBrowserRouter([
                 {
                     path: "/myList",
                     element: <PrivateRoute>
-                       <MyListPage></MyListPage>
+                        <MyCraftList></MyCraftList>
                     </PrivateRoute>,
-                    loader : () => fetch('http://localhost:5000/place')
-                    
                 },
+            
                 {
                     path: "/updateSpots/:id",
                     element: <PrivateRoute>

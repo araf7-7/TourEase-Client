@@ -1,13 +1,13 @@
-import { Link } from "react-router-dom";
 
 
-const MyListCard = ({ place }) => {
-    const { name, _id, country, cost, photo } = place || {}
+
+const MyCraftCard = ({ tourist }) => {
+    const { name, country, cost, photo } = tourist || {}
     return (
         <div>
             <div>
 
-                <div className="container w-auto lg:w-[1200px] p-2 mx-auto sm:p-4 dark:text-gray-800">
+                <div className="container justify-center lg:mx-[50px] w-auto lg:w-[1200px] p-2 mx-auto sm:p-4 dark:text-gray-800">
 
                     <div className="overflow-x-auto">
                         <table className="min-w-full text-xs">
@@ -26,7 +26,8 @@ const MyListCard = ({ place }) => {
                                     <th className="p-3">Country</th>
                                     <th className="p-3">Name</th>
                                     <th className="p-3 text-right">Amount</th>
-                                    <th className="p-3 text-right">Details</th>
+                                    <th className="p-3 text-right">Delete</th>
+                                    <th className="p-3 text-right">Update</th>
                                    
                                 </tr>
                             </thead>
@@ -46,7 +47,10 @@ const MyListCard = ({ place }) => {
                                         <p>{cost}</p>
                                     </td>
                                     <td className="p-3 text-right">
-                                        <Link to={`/place/${_id}`} > <button className="btn bg-yellow-500 "  >View Details</button></Link>
+                                       <button className="btn bg-yellow-500">Delete</button>
+                                    </td>
+                                    <td className="p-3 text-right">
+                                       <button className="btn bg-yellow-500">Update</button>
                                     </td>
                                 </tr>
 
@@ -59,4 +63,4 @@ const MyListCard = ({ place }) => {
     );
 };
 
-export default MyListCard;
+export default MyCraftCard;
