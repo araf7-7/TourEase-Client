@@ -2,10 +2,10 @@ import Swal from "sweetalert2";
 
 
 
-const MyCraftCard = ({ tourist , setTourists, tourists }) => {
+const MyCraftCard = ({ tourist, setTourists, tourists }) => {
 
     const { _id, name, country, cost, photo } = tourist || {}
-   
+
     const handleDelete = _id => {
         console.log(_id);
         Swal.fire({
@@ -16,25 +16,25 @@ const MyCraftCard = ({ tourist , setTourists, tourists }) => {
             confirmButtonColor: "#3085d6",
             cancelButtonColor: "#d33",
             confirmButtonText: "Yes, delete it!"
-          }).then((result) => {
+        }).then((result) => {
             if (result.isConfirmed) {
-            
-            fetch(`http://localhost:5000/userTourist/${_id}`,{
-                method: 'DELETE'
-            })
-                .then(res => res.json())
-                .then(data => {
-                    console.log(data);
-                    if(data.deletedCount > 0){
-                        Swal.fire({
-                        title: "Deleted!",
-                        text: "Your craft has been deleted.",
-                        icon: "success"
-                        });
-                        const remaining = tourists.filter(craf => craf._id !== _id);
-                        setTourists(remaining)
-                    }
+
+                fetch(`https://assignment-10-server-delta-dun.vercel.app/userTourist/${_id}`, {
+                    method: 'DELETE'
                 })
+                    .then(res => res.json())
+                    .then(data => {
+                        console.log(data);
+                        if (data.deletedCount > 0) {
+                            Swal.fire({
+                                title: "Deleted!",
+                                text: "Your craft has been deleted.",
+                                icon: "success"
+                            });
+                            const remaining = tourists.filter(craf => craf._id !== _id);
+                            setTourists(remaining)
+                        }
+                    })
             }
         });
 

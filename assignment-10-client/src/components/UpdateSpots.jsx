@@ -2,9 +2,9 @@ import { useLoaderData } from "react-router-dom";
 import Swal from "sweetalert2";
 
 const UpdateSpots = () => {
-   
+
     const place = useLoaderData();
-    const {name, _id, country, location,  description, cost, seasonality, time, visitor, photo} = place||{}
+    const { name, _id, country, location, description, cost, seasonality, time, visitor, photo } = place || {}
     const handleAddPlace = event => {
         event.preventDefault()
         const form = event.target
@@ -19,9 +19,9 @@ const UpdateSpots = () => {
 
         const photo = form.photo.value
 
-        const updatedSpots = { name, country, location, description, cost, seasonality, time, visitor, photo,  }
-        fetch(`http://localhost:5000/place/${_id}`, {
-            method: 'PUT' ,
+        const updatedSpots = { name, country, location, description, cost, seasonality, time, visitor, photo, }
+        fetch(`https://assignment-10-server-delta-dun.vercel.app/place/${_id}`, {
+            method: 'PUT',
             headers: {
                 'content-type': 'application/json'
             },
@@ -44,7 +44,7 @@ const UpdateSpots = () => {
     }
     return (
         <div>
-           
+
             <div className="bg-yellow-100 mx-auto w-auto lg:w-[1000px] p-10 lg:p-20 m-3 rounded-xl">
                 <h2 className="text-3xl my-3 text-center font-extrabold">Update a Tourist Spot</h2>
                 <form onSubmit={handleAddPlace} >
@@ -82,7 +82,7 @@ const UpdateSpots = () => {
                                 <span className="label-text">Short Description</span>
                             </label>
                             <label className="input-group">
-                                <input type="text" name="description" defaultValue={ description} placeholder="Short Description" className="input input-bordered w-full" />
+                                <input type="text" name="description" defaultValue={description} placeholder="Short Description" className="input input-bordered w-full" />
                             </label>
                         </div>
                     </div>

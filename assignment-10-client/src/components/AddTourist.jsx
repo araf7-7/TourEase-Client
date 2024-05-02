@@ -3,7 +3,7 @@ import Swal from "sweetalert2";
 import UseAuth from "./UseAuth";
 
 const AddTourist = () => {
-    const {user} = UseAuth()
+    const { user } = UseAuth()
     const handleAddPlace = event => {
         event.preventDefault()
         const form = event.target
@@ -20,7 +20,7 @@ const AddTourist = () => {
         const photo = form.photo.value
 
         const newPlace = { name, country, location, description, cost, seasonality, time, visitor, fullName, photo, email }
-        fetch('http://localhost:5000/place', {
+        fetch('https://assignment-10-server-delta-dun.vercel.app/place', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -33,22 +33,22 @@ const AddTourist = () => {
             .then(data => {
 
                 console.log(data)
-                if(data.insertedId){
-                    fetch('http://localhost:5000/userTourist', {
-                    method: 'POST',
-                    headers: {
-                        'content-type' : 'application/json'
-                    },
-                    body: JSON.stringify({ name, country, location, description, cost, seasonality, time, visitor, fullName, photo, email:user?.email})
-                })
+                if (data.insertedId) {
+                    fetch('https://assignment-10-server-delta-dun.vercel.app/userTourist', {
+                        method: 'POST',
+                        headers: {
+                            'content-type': 'application/json'
+                        },
+                        body: JSON.stringify({ name, country, location, description, cost, seasonality, time, visitor, fullName, photo, email: user?.email })
+                    })
                     Swal.fire({
                         title: 'Success!',
                         text: 'Tourist Spot Added Successfully',
                         icon: 'success',
                         confirmButtonText: 'Cool'
-                      })
+                    })
                 }
-               
+
             })
     }
     return (

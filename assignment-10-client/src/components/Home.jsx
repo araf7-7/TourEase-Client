@@ -19,7 +19,7 @@ const Home = () => {
     const [places, setPlaces] = useState([]);
 
     useEffect(() => {
-        fetch("http://localhost:5000/place")
+        fetch("https://assignment-10-server-delta-dun.vercel.app/place")
             .then(res => res.json())
             .then(data => setPlaces(data));
     }, [])
@@ -35,7 +35,7 @@ const Home = () => {
                     {places?.slice(0, 7).map(place => <TouristSection key={place.id} place={place}></TouristSection>)}
                 </div>
             </section>
-            
+
 
             <div className="container mx-auto items-center justify-center mt-20">
                 <h1 className="text-4xl font-bold text-center">Countries</h1>
@@ -51,8 +51,8 @@ const Home = () => {
                         </CountryCard>)
                 }
             </div>
-                    <Review></Review>
-                    <Team></Team>
+            <Review></Review>
+            <Team></Team>
 
         </>
     );

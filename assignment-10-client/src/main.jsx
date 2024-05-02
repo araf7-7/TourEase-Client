@@ -38,11 +38,11 @@ const router = createBrowserRouter([
                 {
                     path: "/",
                     element: <Home></Home>,
-                    loader: () => fetch('http://localhost:5000/category')
-                    
-                   
+                    loader: () => fetch('https://assignment-10-server-delta-dun.vercel.app/category')
+
+
                 },
-               
+
                 {
                     path: "/login",
                     element: <Login></Login>,
@@ -54,7 +54,7 @@ const router = createBrowserRouter([
                 {
                     path: "/allTourist",
                     element: <AllTourist></AllTourist>,
-                  
+
                 },
                 {
                     path: "/addTourist",
@@ -68,13 +68,13 @@ const router = createBrowserRouter([
                         <MyCraftList></MyCraftList>
                     </PrivateRoute>,
                 },
-            
+
                 {
                     path: "/updateSpots/:id",
                     element: <PrivateRoute>
                         <UpdateSpots></UpdateSpots>
                     </PrivateRoute>,
-                    loader : ({params}) => fetch(`http://localhost:5000/place/${params.id}`)
+                    loader: ({ params }) => fetch(`https://assignment-10-server-delta-dun.vercel.app/place/${params.id}`)
 
                 },
                 {
@@ -87,19 +87,19 @@ const router = createBrowserRouter([
                 {
                     path: "/place/:id",
                     element: <PrivateRoute>
-                      <TouristDetails></TouristDetails>
+                        <TouristDetails></TouristDetails>
                     </PrivateRoute>,
-                    loader: () => fetch('http://localhost:5000/place')
-                  },
+                    loader: () => fetch('https://assignment-10-server-delta-dun.vercel.app/place')
+                },
 
                 {
                     path: "/category/:id",
-                    element : <CategoriesCard></CategoriesCard>
+                    element: <CategoriesCard></CategoriesCard>
                 },
                 {
                     path: "/touristSpot",
-                    element : <TouristSpots></TouristSpots>,
-                 
+                    element: <TouristSpots></TouristSpots>,
+
                 }
             ],
     },

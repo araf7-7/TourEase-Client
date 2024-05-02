@@ -1,4 +1,4 @@
-import  { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import MyCraftCard from "./MyCraftCard";
 import UseAuth from "./UseAuth";
 
@@ -7,7 +7,7 @@ const MyCraftList = () => {
 
   const [tourists, setTourists] = useState([]);
   useEffect(() => {
-    fetch(`http://localhost:5000/userTourist/${user?.email}`)
+    fetch(`https://assignment-10-server-delta-dun.vercel.app/userTourist/${user?.email}`)
       .then((res) => res.json())
       .then((data) => setTourists(data))
       .catch((error) => {
